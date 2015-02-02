@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+</html>
+<head>
+  <title>Assignment3 Part 2</title>
+  <meta charset = 'utf-8'>
+  <script src ="a3p2js.js"></script>
+</head>
+
+<body>
+
+    <div>
+    <p>Please select how many pages of Gists you would like (1-5)</p>
+    <div>
+      <select name = 'pageSelect'>
+      <option value = '1'>1</option>
+      <option value = '2'>2</option>
+      <option value = '3'>3</option>
+      <option value = '4'>4</option>
+      <option value = '5'>5</option>
+      </select>
+      <br>
+      <br>
+    </div>
+  <div>
+    
+    <legend>Please select the language(s) you would like to see</legend>
+    
+    <input type = 'checkbox' name = 'langSelect' value = 'JSON'><label>JSON</label>
+   
+    <input type = 'checkbox' name = 'langSelect' value = 'JavaScript'><label>JavaScript</label>
+    
+    <input type = 'checkbox' name = 'langSelect' value = 'Python'><label>Python</label>
+    
+    <input type = 'checkbox' name = 'langSelect' value = 'SQL'><label>SQL</label>
+    
+    <input type = 'checkbox' name = 'langSelect' value = 'All'><label>All</label>
+    <br>
+  </div>
+
+    <input type = 'button' name ='requestGists' onclick = 'requestGists()' value = 'Request'>
+  </div>
+  <br>
+  <br>
+
+  <section>
+    <h>Your Results</h>
+      <ul id = "results">
+    </ul>
+
+  </section>
+  <br>
+  <section>
+    <h>Your Favorites</h>
+    <p>
+      <div id = "list"></div>
+    </p>
+
+  </section>
+</body>
+</html>
