@@ -1,13 +1,13 @@
 //funtion for request gists
 function requestGists(){
   //found this httprequest from the discussions in class and from week 4 readings. 
-  var httpReq = new XMLHttpRequest;
+  var serverRequest = new XMLHttpRequest;
   //if 4 pages AND (second loop?) if the status is 200
-  httpReq.onreadystatechange = function () {
+  serverRequest.onreadystatechange = function () {
   if (this.readyState === 4) {
       if (this.status === 200) {
 
-    var arrayofGists = JSON.parse(httpReq.responseText);
+    var arrayofGists = JSON.parse(serverRequest.responseText);
         console.log(arrayofGists[0].url);
         createList (arrayofGists);
   }
@@ -19,8 +19,8 @@ function requestGists(){
     }
   }
   //get the information from github using GET, not POST
-  httpReq.open('GET', '//api.github.com/gists/public');
-  httpReq.send();
+  serverRequest.open('GET', '//api.github.com/gists/public');
+  serverRequest.send();
  }
  //funtcion for creating a list named createList. 
  function createList(arrayofGists) {
